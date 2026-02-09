@@ -5,22 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nama Toko</title>
     <style>
+            *{
+                margin:0;
+                font-family:verdana ;
+            }
+            body{
+                background: url(image/gambar-buah.png) no-repeat fixed;
+                background-size: cover;
+            }
+            .wrapper{
+                width:100%;
+                max-width:100%;
+                margin: 0 auto;
+            }
+            nav{
+               
+                background:rgb(7, 7, 7);
+            }
+            nav ul{
+                padding:0px;
+            }
+            nav li{
+                list-style-type: none;
+            }
+            nav li a{
+                text-decoration:none;
+                color:antiquewhite;
+                display:block;
+                padding:10px;
+                text-align:center;
+            }
+            nav a:hover{
+                background-color: grey;
+            }
+            .fb{
+                background: url(image/facebook.png) no-repeat center;
+                background-size:50%;
+                text-indent:-10000px;
+            }
+            .tw{
+                background: url(image/twiter.png) no-repeat center;
+                background-size:70%;
+                text-indent: -10000px;
+            }
+            nav ul.social{
+                display:flex;
+                max-width:80px;
+                flex:1 1 0;
+                margin: 0 auto;
+            }
+            nav ul.social li{
+                flex: 1 1 0;
+            
+            }
 
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="container-nav">
-        <nav>
-            <a href="#">Beranda</a>
-            <a href="#">Menu</a>
-            <a href="#">Tentanng kami</a>
-            <a href="#">Kontak</a>
-        </nav>
+
+            @media screen and (min-width:680px){
+                nav ul{
+                    display:flex;
+                    justify-content:center;
+                }
+                nav ul li{
+                    flex:1 1 0;
+                }
+                nav{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                nav ul.social{
+                    margin:0;
+                }
+            }
+            .container{
+                display:grid;
+                grid-template-rows:repeat(2, auto);
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+            <nav>
+                <ul>
+                     <li><a href="">Home</a></li>
+                     <li><a href="">Store</a></li>
+                     <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                </ul>
+
+                <ul class="social">
+                    <li><a href="" class="fb">Facebook</a></li>
+                    <li><a href="" class="tw">Twiter</a></li>
+                 </ul>
+            </nav>
         </div>
-        <section></section>
-        <aside></aside>
-    </div>
+            <div class="container">
+                <section>
+                    <h1>Segarnya Jus Buah <br> Alami dari Bone</h1>
+                </section>
+                <aside></aside>
+            </div>
     
 </body>
 </html>
