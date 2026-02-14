@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas MATWA</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
             *{
                 margin:0;
                 font-family:verdana ;
@@ -12,7 +13,7 @@
             body{
                min-height: 100vh;
                margin: 0;
-               background: linear-gradient(rgb(220, 159, 159), whitesmoke);
+               background: linear-gradient(to bottom, black, white);
             }
             .website{
                 display:grid;
@@ -32,7 +33,6 @@
                 margin: 0 auto;
             }
             nav{
-               
                 background:#0f0f0f;
             }
             nav ul{
@@ -50,6 +50,7 @@
             }
             nav a:hover{
                 background-color: grey;
+                transition: 0.5s;
             }
             .content-header{
                 grid-area:header;
@@ -60,7 +61,9 @@
                 grid-area:image;
                 justify-items: center;
             }
-
+            .content-header h1{
+                    font-family: "Bitcount Prop Single", system-ui;
+            }
             @media screen and (min-width:680px){
                 nav ul{
                     display:flex;
@@ -73,9 +76,6 @@
                     display: flex;
                     justify-content:center;
                 }
-            }
-            .container{
-                padding:10px;
             }
         </style>
     </head>
