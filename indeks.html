@@ -29,8 +29,10 @@
                 "main main main"
                 "footer footer footer";
             grid-template-columns: 1fr 1fr 1fr;
-            row-gap: 50px;
+            row-gap: 40px;
         }
+
+        /* ================= NAV STYLE ================= */
 
         .wrapper-nav {
             grid-area: nav;
@@ -73,6 +75,8 @@
             justify-items: center;
         }
 
+        /* ================= HEADER STYLE ================= */
+
         .content-header h1 {
             font-family: "Bitcount Prop Single", system-ui;
             text-align: center;
@@ -91,12 +95,7 @@
             }
         }
 
-        .content-main {
-            grid-area: main;
-            justify-items: center;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+        /* ================= PARAGRAPH STYLE ================= */
 
         .content-paragraph {
             grid-area: paragraph;
@@ -138,9 +137,66 @@
             border-top: 2px solid black;
         }
 
+        /* ================= TABLE STYLE ================= */
+
+.content-main {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content-main table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 13px;
+}
+
+.content-main th,
+.content-main td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.content-main th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+    .content-main table {
+        font-size: 10px;
+        margin-bottom:30px;
+    }
+
+    .content-main th,
+    .content-main td {
+        padding: 4px;
+    }
+}
+        /* ================= FOOTER STYLE ================= */
+
+        .wrapper-footer {
+            grid-area: footer;
+            max-width:100%;
+            background:rgb(7, 7, 7);
+            height:auto;
+        }
+        footer h3 {
+            color: whitesmoke;
+            text-align: center;
+            padding-top: 20px;
+        }
+        footer img {
+            width: 30px;
+            height: 30px;
+            margin: 10px 0 0 20px;
+        }
 
 
-
+        
         @media screen and (min-width:680px) {
             nav ul {
                 display: flex;
@@ -158,6 +214,10 @@
 
             .content-paragraph {
                 margin-top: 200px;
+            }
+
+            .content-main table{
+                margin-bottom:20px;
             }
         }
     </style>
@@ -228,8 +288,6 @@
                     </div>
 
                 </div>
-
-
             </div>
         </div>
 
@@ -237,18 +295,57 @@
     <div class="content-main">
         <table border="1" cellspacing="0" cellpadding="10">
             <tr>
-                <th>Nama</th>
-                <td>Vincentius Azel Nainggolan</td>
+                <th colspan="5">Anuitas = Rp 3.182.376</th>
             </tr>
             <tr>
-                <th>Absen</th>
-                <td>35</td>
+                <th>Perioode</th>
+                <th>Hutang Awal</th>
+                <th>Bunga</th>
+                <th>Angsuran Pokok</th>
+                <th>Sisa Hutang</th>
             </tr>
             <tr>
-                <th>Kelas</th>
-                <td>XI-A</td>
+                <td>1</td>
+                <td>15.000.000</td>
+                <td>300.000</td>
+                <td>2.882.376</td>
+                <td>12.117.624</td>
             </tr>
+            <tr>
+                <td>2</td>
+                <td>12.117.624</td>
+                <td>242.352</td>
+                <td>2.940.024</td>
+                <td>9.177.600</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>9.177.600</td>
+                <td>183.552</td>
+                <td>2.998.824</td>
+                <td>6.178.776</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>6.178.776</td>
+                <td>123.576</td>
+                <td>3.058.800</td>
+                <td>3.119.976</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>3.119.976</td>
+                <td>62.400,54</td>
+                <td>3.119.976,46</td>
+                <td>+0,46</td>
+                <tr></tr>
         </table>
+    </div>
+    <div class="wrapper-footer">
+        <footer>
+            <h3>Kontak Saya</h3>
+            <img src="image/instagram-logo.png" alt="Instagram Logo">
+        </footer>
     </div>
     </div>
 </body>
