@@ -1,102 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas MATWA</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
-            *{
-                margin:0;
-                font-family:verdana ;
-            }
-            body{
-               min-height: 100vh;
-               margin: 0;
-               background: linear-gradient(to bottom, black, white);
-            }
-            .website{
-                display:grid;
-                grid-template-areas:
+
+        * {
+            margin: 0;
+            font-family: verdana;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, black, white);
+        }
+
+        .website {
+            display: grid;
+            grid-template-areas:
                 "nav nav nav"
                 "image image image"
                 "header header header"
-                "main main aside"
+                "paragraph paragraph paragraph"
+                "main main main"
                 "footer footer footer";
-                grid-template-columns: 1fr 1fr 1fr;
-                row-gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 50px;
+        }
+
+        .wrapper-nav {
+            grid-area: nav;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            padding: 0px;
+        }
+
+        nav li {
+            list-style-type: none;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: antiquewhite;
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: grey;
+            transition: 0.5s;
+        }
+
+        .content-header {
+            grid-area: header;
+            padding: 20px;
+            justify-items: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .content-image1 {
+            grid-area: image;
+            justify-items: center;
+        }
+
+        .content-header h1 {
+            font-family: "Bitcount Prop Single", system-ui;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(to right, black, rgb(199, 199, 199), black);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 5s linear infinite;
+        }
+
+        @keyframes animate {
+            to {
+                background-position: 200%;
             }
-            .wrapper-nav{
-                grid-area: nav;
-                width:100%;
-                max-width:100%;
-                margin: 0 auto;
+        }
+
+        .content-main {
+            grid-area: main;
+            justify-items: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .content-paragraph {
+            grid-area: paragraph;
+            text-align: center;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+
+        .perhitungan {
+            margin-top: 40px;
+            line-height: 2;
+        }
+
+        .baris {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .simbol {
+            font-weight: bold;
+        }
+
+        .fraction {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .top {
+            display: block;
+        }
+
+        .bottom {
+            display: block;
+            border-top: 2px solid black;
+        }
+
+
+
+
+        @media screen and (min-width:680px) {
+            nav ul {
+                display: flex;
+                justify-content: center;
             }
-            nav{
-                background:#0f0f0f;
+
+            nav ul li {
+                flex: 1 1 0;
             }
-            nav ul{
-                padding:0px;
+
+            nav {
+                display: flex;
+                justify-content: center;
             }
-            nav li{
-                list-style-type: none;
+
+            .content-paragraph {
+                margin-top: 200px;
             }
-            nav li a{
-                text-decoration:none;
-                color:antiquewhite;
-                display:block;
-                padding:10px;
-                text-align:center;
-            }
-            nav a:hover{
-                background-color: grey;
-                transition: 0.5s;
-            }
-            .content-header{
-                grid-area:header;
-                padding:20px;
-                justify-items: center;
-            }
-            .content-image1{
-                grid-area:image;
-                justify-items: center;
-            }
-            .content-header h1{
-                    font-family: "Bitcount Prop Single", system-ui;
-            }
-            @media screen and (min-width:680px){
-                nav ul{
-                    display:flex;
-                    justify-content:center;
-                }
-                nav ul li{
-                    flex:1 1 0;
-                }
-                nav{
-                    display: flex;
-                    justify-content:center;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="website">
+        }
+    </style>
+</head>
+
+<body>
+    <div class="website">
         <div class="wrapper-nav">
             <nav>
                 <ul>
-                     <li><a href="">Home</a></li>
-                     <li><a href="">Store</a></li>
-                     <li><a href="">About</a></li>
-                     <li><a href="">Contact</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Homework</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </nav>
         </div>
-           
-                <div class="content-header">
-                    <h1>Halo perkenalkan saya Vincentius Azel Nainggolan absen 35 dari kelas XI-A</h1>
-            </div>
-                <div class="content-image1">
+
+        <div class="content-header">
+            <h1>Halo perkenalkan saya Vincentius Azel Nainggolan absen 35 dari kelas XI-A</h1>
+        </div>
+        <div class="content-image1">
             <aside><img src="image/Smanesa-removebg-preview.png" alt="Profile Picture"></aside>
+        </div>
+        <div class="content-paragraph">
+            <p>Saya ingin membeli laptop Asus TUF A15 seharga RP15.000.000 dengan bunga 2%/tahun dan tenor 5 bulan.</p>
+            <br>
+            <div class="perhitungan">
+                <div class="perhitungan">
+
+                    <div class="baris">
+                        <span class="simbol">A =</span>
+                        <div class="fraction">
+                            <span class="top">
+                                i · M<sub>0</sub> (1 + i)<sup>n</sup>
+                            </span>
+                            <span class="bottom">
+                                (1 + i)<sup>n</sup> − 1
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="baris">
+                        <span class="simbol">A =</span>
+                        <div class="fraction">
+                            <span class="top">
+                                0,02 · 15.000.000 (1,02)<sup>5</sup>
+                            </span>
+                            <span class="bottom">
+                                (1,02)<sup>5</sup> − 1
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="baris">
+                        <span class="simbol">A =</span>
+                        <div class="fraction">
+                            <span class="top">
+                                331.224
+                            </span>
+                            <span class="bottom">
+                                0,104080803
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="baris">
+                        <span class="simbol">A = 3.182.376</span>
+                    </div>
+
+                </div>
+
+
             </div>
+        </div>
+
+    </div>
+    <div class="content-main">
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <th>Nama</th>
+                <td>Vincentius Azel Nainggolan</td>
+            </tr>
+            <tr>
+                <th>Absen</th>
+                <td>35</td>
+            </tr>
+            <tr>
+                <th>Kelas</th>
+                <td>XI-A</td>
+            </tr>
+        </table>
+    </div>
+    </div>
 </body>
 </html>
