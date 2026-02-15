@@ -5,222 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas MATWA</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
-
-        * {
-            margin: 0;
-            font-family: verdana;
-        }
-
-        body {
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(to bottom, black, white);
-        }
-
-        .website {
-            display: grid;
-            grid-template-areas:
-                "nav nav nav"
-                "image image image"
-                "header header header"
-                "paragraph paragraph paragraph"
-                "main main main"
-                "footer footer footer";
-            grid-template-columns: 1fr 1fr 1fr;
-            row-gap: 40px;
-        }
-
-        /* ================= NAV STYLE ================= */
-
-        .wrapper-nav {
-            grid-area: nav;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        nav ul {
-            padding: 0px;
-        }
-
-        nav li {
-            list-style-type: none;
-        }
-
-        nav li a {
-            text-decoration: none;
-            color: antiquewhite;
-            display: block;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: grey;
-            transition: 0.5s;
-        }
-
-        .content-header {
-            grid-area: header;
-            padding: 20px;
-            justify-items: center;
-            max-width: 680px;
-            margin: 0 auto;
-        }
-
-        .content-image1 {
-            grid-area: image;
-            justify-items: center;
-        }
-
-        /* ================= HEADER STYLE ================= */
-
-        .content-header h1 {
-            font-family: "Bitcount Prop Single", system-ui;
-            text-align: center;
-            text-transform: uppercase;
-            background: linear-gradient(to right, black, rgb(199, 199, 199), black);
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: animate 5s linear infinite;
-        }
-
-        @keyframes animate {
-            to {
-                background-position: 200%;
-            }
-        }
-
-        /* ================= PARAGRAPH STYLE ================= */
-
-        .content-paragraph {
-            grid-area: paragraph;
-            text-align: center;
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;
-        }
-
-        .perhitungan {
-            margin-top: 40px;
-            line-height: 2;
-        }
-
-        .baris {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin: 15px 0;
-        }
-
-        .simbol {
-            font-weight: bold;
-        }
-
-        .fraction {
-            display: inline-block;
-            text-align: center;
-        }
-
-        .top {
-            display: block;
-        }
-
-        .bottom {
-            display: block;
-            border-top: 2px solid black;
-        }
-
-        /* ================= TABLE STYLE ================= */
-
-.content-main {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.content-main table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    font-size: 13px;
-}
-
-.content-main th,
-.content-main td {
-    border: 1px solid black;
-    padding: 6px;
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.content-main th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-@media screen and (max-width: 480px) {
-    .content-main table {
-        font-size: 10px;
-        margin-bottom:30px;
-    }
-
-    .content-main th,
-    .content-main td {
-        padding: 4px;
-    }
-}
-        /* ================= FOOTER STYLE ================= */
-
-        .wrapper-footer {
-            grid-area: footer;
-            max-width:100%;
-            background:rgb(7, 7, 7);
-            height:auto;
-        }
-        footer h3 {
-            color: whitesmoke;
-            text-align: center;
-            padding-top: 20px;
-        }
-        footer img {
-            width: 30px;
-            height: 30px;
-            margin: 10px 0 0 20px;
-        }
-
-
-        
-        @media screen and (min-width:680px) {
-            nav ul {
-                display: flex;
-                justify-content: center;
-            }
-
-            nav ul li {
-                flex: 1 1 0;
-            }
-
-            nav {
-                display: flex;
-                justify-content: center;
-            }
-
-            .content-paragraph {
-                margin-top: 200px;
-            }
-
-            .content-main table{
-                margin-bottom:20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -228,20 +13,20 @@
         <div class="wrapper-nav">
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Homework</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#homework">Homework</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
-        <div class="content-header">
+        <div class="content-header" id="home">
             <h1>Halo perkenalkan saya Vincentius Azel Nainggolan absen 35 dari kelas XI-A</h1>
         </div>
         <div class="content-image1">
             <aside><img src="image/Smanesa-removebg-preview.png" alt="Profile Picture"></aside>
         </div>
-        <div class="content-paragraph">
+        <div class="content-paragraph" id="homework">
             <p>Saya ingin membeli laptop Asus TUF A15 seharga RP15.000.000 dengan bunga 2%/tahun dan tenor 5 bulan.</p>
             <br>
             <div class="perhitungan">
@@ -341,10 +126,14 @@
                 <tr></tr>
         </table>
     </div>
-    <div class="wrapper-footer">
+    <div class="wrapper-footer" id="contact">
         <footer>
             <h3>Kontak Saya</h3>
+            <div class="link-IG">
             <img src="image/instagram-logo.png" alt="Instagram Logo">
+            <a href="https://www.instagram.com/v.a.n_4321?igsh=d3ZhZndqM2VzbDV3">Instagram</a>
+            </div>
+                <p>&#169; by Vincentius Azel Nainggolan</p>
         </footer>
     </div>
     </div>
